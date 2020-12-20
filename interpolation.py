@@ -92,34 +92,14 @@ def akima_points_derivative(range_x, range_y):
 
 
 def U(start, end, x):
-    """
-    Calculates U value for hermite spline
-    :param start: Interval start
-    :param end: Interval end
-    :param x: Current x
-    :return: Calculated U for given x
-    """
     return (1 - 2 * (1 / (start - end)) * (x - start)) * ((x - end) / (start - end)) ** 2
 
 
 def V(start, end, x):
-    """
-    Calculates V value for hermite spline
-    :param start: Interval start
-    :param end: Interval end
-    :param x: Current x
-    :return: Calculated V for given x
-    """
     return (x - start) * ((x - end) / (start - end)) ** 2
 
 
 def hermite_interpolation_spline(range_x, range_y):
-    """
-    Calculates hermite interpolation spline function
-    :param range_x: All x values
-    :param range_y: All y values
-    :return: Hermite interpolation spline function
-    """
     range_dy = points_slopes(range_x, range_y)
 
     def spline_function(x):
@@ -131,23 +111,14 @@ def hermite_interpolation_spline(range_x, range_y):
                      + U(range_x[index], range_x[index - 1], x) * range_y[index] \
                      + V(range_x[index], range_x[index - 1], x) * range_dy[index]
         except TypeError:
-            # Handles None data from given country's data
             return None
         return result
 
     return spline_function
 
 
-def slope(x1, y1, x2, y2):
-    """
-    Gets given interval slope
-    :param x1: Interval start x
-    :param y1: Interval start y
-    :param x2: Interval end x
-    :param y2: Interval end y
-    :return: Calculated slope
-    """
 
+def slope(x1, y1, x2, y2):
     return (y2 - y1) / (x2 - x1)
 
 
