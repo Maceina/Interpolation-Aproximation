@@ -142,13 +142,6 @@ def points_slopes(range_x, range_y):
 
 
 def parametric_interpolation(fx, fy, range_t):
-    """
-    Combines fx and fx to result in parametric function
-    :param fx: FX
-    :param fy: FY
-    :param range_t: time range
-    :return: x values array, y values array
-    """
     x_results = []
     y_results = []
     for t in range_t:
