@@ -3,7 +3,7 @@ import numpy as np
 
 def f(x):
     """
-    Function given by tasks
+    Function given by task
     :param x: x value
     :return: y value
     """
