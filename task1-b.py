@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # Number of points
 n = 30
 
-# Interpolation function range
+# Interpolation function ranges
 range_start = -3
 range_end = 3
 step_size = (range_end - range_start) / n
