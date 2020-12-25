@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 MAX_Y = 3.5
 
-# Number of pointss
+# Number of points
 n = 30
 
 # Interpolation function range
